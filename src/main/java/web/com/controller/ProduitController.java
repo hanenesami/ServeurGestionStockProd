@@ -1,5 +1,6 @@
 package web.com.controller;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -38,9 +39,9 @@ public class ProduitController {
 		produitService.updateProduit(produit);
 	}
 	
-	@DeleteMapping("/{ref}")
-	public void deleteProduit(@PathVariable String ref) {
-		produitService.deleteProduit(ref);
+	@DeleteMapping("/{id}")
+	public void deleteProduit(@PathVariable Long id) {
+		produitService.deleteProduit(id);
 		
 	}
 }

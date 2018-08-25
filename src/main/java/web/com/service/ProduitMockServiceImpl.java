@@ -11,7 +11,7 @@ import web.com.entity.Produit;
 public class ProduitMockServiceImpl implements IProduitService {
 
 	public ProduitMockServiceImpl(){
-		produits=new ArrayList<>();
+		produits=new ArrayList<Produit>();
 		produits.add(new Produit("Livre", 50, 20));
 		produits.add(new Produit("Cahier", 200, 20));
 		produits.add(new Produit("Stylo", 500, 20));
@@ -38,9 +38,9 @@ public class ProduitMockServiceImpl implements IProduitService {
 	}
 
 	@Override
-	public void deleteProduit(String ref) {
+	public void deleteProduit(Long id) {
 		Produit produit=new Produit();
-		produit.setRef(ref);
+		produit.setId(id);
 		produits.remove(produit);
 		
 	}
