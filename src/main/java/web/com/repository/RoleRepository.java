@@ -1,13 +1,15 @@
 package web.com.repository;
-
-import org.apache.catalina.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
-import web.com.entity.Produit;
+import web.com.entity.Role;
 
 @Repository
-public interface ProduitRepository extends JpaRepository<Produit, Long> {
+public interface RoleRepository extends JpaRepository<Role, Long>{
+	Role findByName(String name);
 
+
+
+	
 
 }

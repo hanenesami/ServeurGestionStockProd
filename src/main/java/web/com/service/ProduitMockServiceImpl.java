@@ -3,6 +3,7 @@ package web.com.service;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.apache.catalina.User;
 import org.springframework.stereotype.Service;
 
 import web.com.entity.Produit;
@@ -42,6 +43,12 @@ public class ProduitMockServiceImpl implements IProduitService {
 		Produit produit=new Produit();
 		produit.setId(id);
 		produits.remove(produit);
+		
+	}
+
+	@Override
+	public void saveAll(Iterable<User> iterable) {
+		// TODO Auto-generated method stub
 		
 	}
 
